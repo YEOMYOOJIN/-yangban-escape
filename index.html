@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/sec/Downloads/yangban_escape%20(1).html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>양반전 방탈출 - 증서를 찾아라</title>
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+:root{--bg:#efe3c8;--card:#fbf5e4;--ink:#2a211b;--seal:#a3281f;--ok:#2f6b3a;--line:#b9a37a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d1814;--card:#2a231d;--ink:#eadfc6;--seal:#e0634f;--ok:#7cc088;--line:#5b4c39}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 "Gowun Dodum","Noto Sans KR",sans-serif}
+main{max-width:720px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:2rem;margin:.4em 0 .1em;letter-spacing:.04em}
+h2{font-size:1.35rem;margin:0 0 .3em}
+.seal{display:inline-block;background:var(--seal);color:#fff;padding:0 .5em;border-radius:3px;font-weight:700}
+.bar{display:flex;gap:8px;margin:14px 0}
+.bar span{flex:1;height:8px;border-radius:4px;background:var(--line)}
+.bar span.on{background:var(--seal)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:6px;padding:18px;margin:14px 0}
+.q{padding:12px 0;border-top:1px dashed var(--line)}
+.q:first-of-type{border-top:0}
+.tag{color:var(--seal);font-weight:700;margin-right:.4em}
+input,select,button{font:inherit;color:var(--ink)}
+input,select{background:transparent;border:2px solid var(--line);border-radius:4px;padding:4px 8px;margin:4px 4px 0 0;max-width:100%}
+button{background:var(--seal);color:#fff;border:0;border-radius:4px;padding:8px 20px;cursor:pointer;margin-top:10px}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.ok{border-color:var(--ok)!important}.no{border-color:var(--seal)!important}
+.msg{margin-top:10px;font-weight:700}
+.note{background:var(--bg);border-left:5px solid var(--seal);padding:10px 14px;margin-top:12px}
+.mark{font-size:.85em;opacity:.8}
+.hid{display:none}
+.final input{font-size:1.4rem;letter-spacing:.3em;width:11em;text-align:center}
+.m{display:grid;grid-template-columns:repeat(25,1fr);width:min(100%,700px);margin:12px auto;border:3px solid var(--ink);line-height:1}
+.m i{font-style:normal;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.m .w{background:#5a4633}.m .f,.m .d{background:var(--card)}.m .o{background:#c9a66b}
+.pad{display:grid;grid-template-columns:repeat(3,56px);gap:6px;justify-content:center}
+.pad button{margin:0;padding:10px;font-size:1.2rem}
+#toast{min-height:1.7em;text-align:center;font-weight:700;color:var(--seal)}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.6);overflow:auto;padding:16px;z-index:5}
+#modal .card{max-width:640px;margin:20px auto}
+.x{background:transparent;color:var(--ink);border:2px solid var(--line);float:right;margin:0;padding:2px 12px}
+.stage{position:relative;width:min(100%,720px);margin:12px auto;border:4px solid #3b2a1c;border-radius:8px;overflow:hidden;line-height:1}
+#tiles{display:grid;width:100%;height:100%}
+#tiles i{font-style:normal;display:flex;align-items:center;justify-content:center}
+#tiles .w{background:#5a4633;box-shadow:inset 0 -4px #4a3828}
+#tiles .f{background:#e9d3a6}#tiles .g{background:#e2caa0}
+#tiles .o{background:#7a5a3c}
+#pc{position:absolute;transition:left .16s linear,top .16s linear;pointer-events:none;z-index:2}
+#pc svg{width:100%;height:100%;display:block}
+#pc.go svg{animation:bob .16s}
+@keyframes bob{50%{transform:translateY(-12%)}}
+@media(prefers-reduced-motion:reduce){#pc{transition:none}#pc.go svg{animation:none}}
+h1,h2,.seal,.tag,.x{font-family:"Jua","Gowun Dodum",sans-serif;font-weight:400}
+.stage{background:repeating-linear-gradient(0deg,#e8cd96 0 34px,#dcbd80 34px 36px)}
+#rug{position:absolute;background:repeating-linear-gradient(45deg,#b5483a 0 8px,#a33f33 8px 16px);border:4px double #e8c36a;border-radius:8px;opacity:.95}
+#tiles i{position:relative}
+#tiles .pw{background:#f3e9d2;border-bottom:5px solid #7a5a3c}
+#tiles .win{background:linear-gradient(#7a4a28,#7a4a28) center/3px 100% no-repeat,linear-gradient(#7a4a28,#7a4a28) center/100% 3px no-repeat,#fbf3dc;border:4px solid #7a4a28}
+#tiles .v{background:#5a4633;box-shadow:inset 0 -4px #4a3828}
+#tiles svg{width:100%;height:100%;display:block}
+#tiles b{position:absolute;right:0;bottom:0;font-size:.65em;font-weight:400}
+body{background-image:radial-gradient(#fff6 2px,transparent 2.5px);background-size:26px 26px}
+.stage{background:radial-gradient(#fff7 2px,transparent 2.6px) 0 0/30px 30px,repeating-linear-gradient(0deg,#f8dcb2 0 34px,#f0cd9f 34px 36px);border:5px solid #8a5a44;border-radius:16px;box-shadow:0 6px 0 #6e4634,0 10px 18px #0003}
+#rug{background:repeating-linear-gradient(45deg,#e8654f 0 8px,#f08a68 8px 16px);border:4px double #ffd96a;border-radius:10px;opacity:.97}
+#tiles .pw{background:#fff3dc;border-bottom:6px solid #e9a0a8}
+#tiles .win{background:linear-gradient(#b57a5e,#b57a5e) center/3px 100% no-repeat,linear-gradient(#b57a5e,#b57a5e) center/100% 3px no-repeat,#e8f6ff;border:4px solid #b57a5e;border-radius:8px}
+#tiles .v{background:#9a7560;box-shadow:inset 0 -4px #86624f}
+#tiles svg{filter:drop-shadow(0 2px 0 #0002)}
+.card{border-radius:14px}
+#tiles b{right:auto;bottom:auto;left:50%;top:50%;transform:translate(-50%,-50%);font-size:1.05em;background:#fff;border-radius:50%;padding:2px;line-height:1;box-shadow:0 1px 3px #0005;z-index:1}
+</style></head><body><main>
+<h1><span class="seal">양반</span>전 방탈출</h1>
+<p>정선 고을 곳간에 군수가 쓴 증서 두 장이 숨겨져 있다. 방 일곱 곳의 문제를 풀어 열쇠를 모아, 곳간의 마지막 자물쇠를 열어라.</p>
+<div class="card note"><b>📢 공지 — 꼭 읽고 시작하자!</b><ul style="margin:6px 0 0;padding-left:1.2em"><li>마지막 곳간(🔐)에서는 <b>여섯 자리 숫자 비밀번호</b>를 입력해야 탈출할 수 있다.</li><li>비밀번호는 여러 문제의 <b>정답</b>을 조합해서 만든다. 어떤 문제의 답이 필요한지는 방을 풀 때마다 <b>열쇠 수첩</b>에 적힌다.</li><li>그러니 문제를 풀 때마다 <b>답을 종이나 메모장에 미리 적어 두자.</b></li><li>이미 푼 방(✅ 책상)에도 다시 들어가 문제와 정답을 볼 수 있다.</li></ul></div>
+<p id="tip">복도의 문으로 들어가 방 안을 구석구석 살펴보자. 방향키(WASD)나 아래 버튼으로 걷고, 물건에 부딪히면 살펴볼 수 있다. 📜 책상에서 문제를 풀면 다음 방의 문(🔒)이 열린다. 아랫줄 맨 오른쪽 🔐이 마지막 곳간이다.</p>
+<div id="toast" aria-live="polite"></div>
+<div class="stage" id="stage" role="img" aria-label="방 안 풍경" style="aspect-ratio: 15 / 7;"><div id="rug" style="left: 6.66667%; top: 42.8571%; width: 86.6667%; height: 14.2857%;"></div><div id="tiles" style="grid-template-columns: repeat(15, 1fr); font-size: 28.024px;"><i class="pw"></i><i class="pw"></i><i class="pw"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">1</text></svg></i><i class="pw"></i><i class="pw"></i><i class="pw"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">2</text></svg><b>🔒</b></i><i class="pw"></i><i class="pw"></i><i class="pw"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">3</text></svg><b>🔒</b></i><i class="pw"></i><i class="pw"></i><i class="pw"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">4</text></svg><b>🔒</b></i><i class="pw"></i><i class="pw"></i><i class="pw"></i><i class="v"></i><i class=""><svg viewBox="0 0 40 40" stroke="#4a3828" stroke-width="1"><rect x="17" y="18" width="6" height="16" rx="1" fill="#f5efe0"></rect><rect x="12" y="33" width="16" height="4" rx="2" fill="#8a6a3a"></rect><path d="M20 6q6 6 0 12q-6-6 0-12z" fill="#ffb83d" stroke="none"></path><path d="M20 11q2 3 0 6q-2-3 0-6z" fill="#fff3b0" stroke="none"></path></svg></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""><svg viewBox="0 0 40 40" stroke="#4a3828" stroke-width="1"><path d="M20 26q-11-4-9-15q9 2 9 15z" fill="#4f9a55"></path><path d="M20 26q11-4 9-15q-9 2-9 15z" fill="#6bb36a"></path><path d="M20 26q-2-10 0-18q4 8 0 18z" fill="#3f8a48"></path><path d="M12 26h16l-2 11h-12z" fill="#b9683f"></path><circle cx="16.5" cy="31" r="1.2" fill="#2a211b" stroke="none"></circle><circle cx="23.5" cy="31" r="1.2" fill="#2a211b" stroke="none"></circle><circle cx="14" cy="33" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"></circle><circle cx="26" cy="33" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"></circle><path d="M18.2 33q1.8 1.6 3.6 0" fill="none" stroke="#2a211b" stroke-width="1"></path></svg></i><i class="v"></i><i class="v"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="v"></i><i class="v"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="v"></i><i class="v"></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class="v"></i><i class="v"></i><i class=""><svg viewBox="0 0 40 40" stroke="#4a3828" stroke-width="1"><path d="M11 14q9-6 18 0l3 18q-12 6-24 0z" fill="#d8b46a"></path><path d="M12 15q8 4 16 0" stroke="#8a6a3a" stroke-width="2" fill="none"></path><circle cx="16.5" cy="25" r="1.2" fill="#2a211b" stroke="none"></circle><circle cx="23.5" cy="25" r="1.2" fill="#2a211b" stroke="none"></circle><circle cx="14" cy="27" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"></circle><circle cx="26" cy="27" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"></circle><path d="M18.2 27q1.8 1.6 3.6 0" fill="none" stroke="#2a211b" stroke-width="1"></path></svg></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""></i><i class=""><svg viewBox="0 0 40 40" stroke="#4a3828" stroke-width="1"><rect x="10" y="5" width="20" height="30" fill="#f6eed8"></rect><rect x="8" y="3" width="24" height="3" fill="#6a4a2a"></rect><rect x="8" y="34" width="24" height="3" fill="#6a4a2a"></rect><path d="M12 30l6-10 4 5 3-4 5 9z" fill="#5a7a6a"></path><circle cx="26" cy="13" r="3" fill="#d9534f" stroke="none"></circle></svg></i><i class="v"></i><i class="v"></i><i class="v"></i><i class="v"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">5</text></svg><b>🔒</b></i><i class="v"></i><i class="v"></i><i class="v"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">6</text></svg><b>🔒</b></i><i class="v"></i><i class="v"></i><i class="v"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="9" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">7</text></svg><b>🔒</b></i><i class="v"></i><i class="v"></i><i class="v"><svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"></rect><rect x="8" y="4" width="24" height="32" fill="#fff3dc"></rect><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"></path><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"></rect><text x="20" y="23" text-anchor="middle" font-size="7" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">곳간</text></svg><b>🔒</b></i><i class="v"></i><i class="v"></i><i class="v"></i></div><div id="pc" class="go" style="width: 6.66667%; height: 14.2857%; left: 46.6667%; top: 71.4286%;"><svg viewBox="0 0 40 44" style="transform: scaleX(1);"><ellipse cx="20" cy="40" rx="10" ry="3" fill="#0004"></ellipse><rect x="11" y="26" width="18" height="13" rx="6" fill="#4a78c2"></rect><rect x="18" y="26" width="4" height="9" fill="#f4eee0"></rect><circle cx="20" cy="19" r="10" fill="#ffe0c2"></circle><ellipse cx="20" cy="12" rx="15" ry="3.5" fill="#2b2b2b"></ellipse><path d="M12 12a8 8 0 0 1 16 0z" fill="#2b2b2b"></path><circle cx="16.5" cy="20" r="1.6" fill="#2a211b"></circle><circle cx="23.5" cy="20" r="1.6" fill="#2a211b"></circle><circle cx="13.5" cy="23" r="2" fill="#ff8f8f" opacity=".7"></circle><circle cx="26.5" cy="23" r="2" fill="#ff8f8f" opacity=".7"></circle><path d="M17.5 24.5q2.5 2 5 0" stroke="#2a211b" fill="none" stroke-width="1.2" stroke-linecap="round"></path></svg></div></div>
+<div class="pad"><span></span><button data-d="0,-1" aria-label="위">▲</button><span></span><button data-d="-1,0" aria-label="왼쪽">◀</button><button data-d="0,1" aria-label="아래">▼</button><button data-d="1,0" aria-label="오른쪽">▶</button></div>
+<div class="card note" id="book"><b>열쇠 수첩</b> <span id="st">(푼 방 0/7)</span><div id="keys">아직 얻은 열쇠가 없다.</div></div>
+<div id="modal" class="hid"><div class="card" id="mb"></div></div>
+<script>
+// type: t=직접 쓰기, s=고르기, m=연결(㉠~㉣)
+var OX=["O","X"];
+var R=[
+{n:"서당 앞마당",key:"열쇠 1: 곳간 자물쇠의 앞 두 자리는 10번과 11번 문제의 정답 번호를 차례로 쓴 것이다.",qs:[
+{t:"t",l:"01",q:"작품에는 어떤 시대의 사회 환경과 문화, 사상, 제도 등 그 시대의 전반적인 모습이 (　　)된다.",a:"반영"},
+{t:"t",l:"02",q:"사회·문화적 상황은 작품에 직접 드러날 수도 있고, 작품 창작의 (　　)(으)로 작용할 수도 있다.",a:"배경"},
+{t:"t",l:"단어",q:"생각하던 바와 달리 허망하다. (ㅁㄹㅎㄷ)",a:"맹랑하다"},
+{t:"t",l:"단어",q:"권리나 의무, 사실 따위를 증명하는 문서. (ㅈㅅ)",a:"증서"},
+{t:"t",l:"단어",q:"제멋대로 굴며 몹시 난폭함. (ㅎㅍ)",a:"횡포"}]},
+{n:"정선 관아",key:"열쇠 2: 자물쇠의 뒤 네 자리는 12~15번 연결 정답을 ㉠=1, ㉡=2, ㉢=3, ㉣=4로 바꿔 차례로 쓴 것이다.",qs:[
+{t:"s",l:"03",q:"강원도 정선 고을에 사는 군수는 새로 양반 신분을 내릴 수 있었다.",o:OX,a:"X"},
+{t:"s",l:"04",q:"같은 고을에 사는 부자가 딸을 양반 집안과 결혼시켜 신분을 바꾸려고 한다.",o:OX,a:"X"},
+{t:"s",l:"05",q:"군수가 쓴 첫 번째 증서를 보면 당시 양반은 체면을 중시하고 허례허식에 빠져 있었다.",o:OX,a:"O"},
+{t:"s",l:"06",q:"이 작품이 창작된 조선 시대 후기에는 엄격했던 신분 제도가 점차 무너지면서 신분을 사고팔 수 있었다.",o:OX,a:"O"},
+{t:"t",l:"단어",q:"논밭의 잡풀을 뽑아내다. (ㄱㅁㄷ)",a:"김매다"},
+{t:"t",l:"단어",q:"마음이 너그럽고 착하며 슬기롭고 덕이 높다. (ㅇㅈㄷ)",a:"어질다"}]},
+{n:"양반의 곳간",key:"열쇠 3: 10번과 11번의 정답 번호를 찾았다. 이제 마지막 방에서 뒤 네 자리를 알아내자.",qs:[
+{t:"s",l:"07",q:"군수가 양반 신분을 사고판 일을 확인하는 (　　)을/를 두 번에 걸쳐 작성했다.",o:["환곡","증서"],a:"증서"},
+{t:"s",l:"08",q:"두 번째 양반 신분 매매 증서의 내용은 다른 계층에 대한 양반의 (　　)을/를 보여 준다.",o:["횡포","의무"],a:"횡포"},
+{t:"s",l:"09",q:"작가는 허례허식을 중요시하며 권력을 남용하는 양반들을 (　　)하고 있다.",o:["칭송","비판"],a:"비판"},
+{t:"s",l:"10",q:"첫 번째 증서에 나타난 양반의 의무가 아닌 것은?",o:["① 손에 돈을 쥐지 않기","② 밥보다 먼저 국을 먹지 않기","③ 관청에서 환곡을 빌리지 않기","④ 소리 내어 국을 마시지 않기","⑤ 날이 더워도 맨발로 다니지 않기"],a:"③ 관청에서 환곡을 빌리지 않기"},
+{t:"s",l:"11",q:"두 번째 증서에 나타난 양반의 권리가 아닌 것은?",o:["① 농사나 장사를 하지 않아도 된다.","② 돈을 받고 양반 신분을 팔 수 있다.","③ 글만 대강 공부하여도 높은 벼슬을 할 수 있다.","④ 일꾼을 뺏어서 자기 밭을 김맨들 아무도 거역할 수 없다.","⑤ 백성의 상투를 잡아 돌리거나 구레나룻을 뽑는 등 괴롭혀도 된다."],a:"② 돈을 받고 양반 신분을 팔 수 있다."},
+{t:"t",l:"단어",q:"물건이나 돈 등을 몹시 아껴 씀씀이가 너그럽지 못하다. (ㅇㅅㅎㄷ)",a:"인색하다"}]},
+{n:"부자의 마당",key:"열쇠 4: 연결 문제를 모두 맞혔다. 아직 장터와 서고가 남았다.",qs:[
+{t:"m",l:"12",q:"“양반은 아무리 가난해도 늘 높고 귀하며 우리는 아무리 잘살아도 늘 낮고 천하다. …… 우리는 이와 같이 욕보며 사는 신세이다.”",a:"㉣"},
+{t:"m",l:"13",q:"부자가 양반의 집 대문 앞에 나아가 환곡을 갚아 주겠다고 청하니 양반이 반가워하며 그렇게 하라고 했다. 부자는 당장에 양반의 환곡을 관청에 바쳤다.",a:"㉢"},
+{t:"m",l:"14",q:"강원도 정선 고을에 한 양반이 살았다. 어질고 글 읽기를 좋아했으므로 …… 그러나 집이 가난해서 해마다 관청의 환곡을 빌려 먹다 보니 그것이 쌓여서 그 빚이 일천 섬에 이르렀다.",a:"㉠"},
+{t:"m",l:"15",q:"“소인 놈이 제 몸을 낮추려는 것이 아니라 환곡을 갚느라고 이미 제 양반을 팔았기 때문에 이리하는 것입니다.”",a:"㉡"},
+{t:"t",l:"단어",q:"기울어지거나 쓰러지지 않도록 아래를 받쳐 안정시키다. (ㄱㄷ)",a:"괴다"}]}
+];
+var V={"부임하다":"임명이나 발령을 받아 근무할 곳으로 가다.","환곡":"조선 시대에, 곡식을 관청에서 저장하였다가 백성들에게 봄에 빌려주고 가을에 이자를 붙여 거두던 일. 또는 그 곡식.","섬":"곡식, 가루, 액체 등의 부피를 재는 단위. 약 180리터에 해당한다.","역정":"몹시 언짢거나 못마땅하여서 내는 성.","푼":"예전에, 엽전을 세던 단위.","벙거지":"주로 병졸이나 하인이 쓰던, 털로 만든 검고 두꺼운 모자.","잠방이":"가랑이가 무릎까지 내려오도록 짧게 만든 홑바지.","조아리다":"상대편에게 존경의 뜻을 보이거나 애원하느라고 이마가 바닥에 닿을 정도로 머리를 자꾸 숙이다.","장사치":"장사하는 사람을 낮잡아 이르는 말.","좌수":"조선 시대에, 지방의 자치 기구인 향청의 우두머리.","진사":"조선 시대에, 과거의 예비 시험인 소과의 두 번째 시험에 합격한 사람에게 준 칭호. 또는 그런 사람.","장차":"앞으로의 뜻으로, 미래의 어느 때를 나타내는 말."};
+function W(w){var k=Object.keys(V),i=k.indexOf(w),o=[0,2,5,7].map(function(d){return V[k[(i+d)%k.length]]});o=o.slice(i%4).concat(o.slice(0,i%4));return{t:"s",l:"단어",q:"‘"+w+"’의 뜻으로 알맞은 것은?",o:o,a:V[w]}}
+function P(q,a,d){var o=[a].concat(d),n=q.length%3;o=o.slice(n).concat(o.slice(0,n));return{t:"s",l:"본문",q:q,o:o,a:a}}
+R.push({n:"장터 (본문 단어)",key:"열쇠 5: 본문 단어를 모두 풀었다. 서고만 남았다.",qs:["부임하다","환곡","섬","역정","푼","벙거지","잠방이","조아리다"].map(W)});
+R.push({n:"서고 (본문 질문)",key:"열쇠 6: 서고의 문제를 모두 풀었다. 마지막 영상실만 남았다.",qs:[
+P("부자가 바라는 것은 무엇일까?","부자는 양반 신분을 사서 양반으로 살고 싶어 한다.",["부자는 군수가 되어 고을을 다스리고 싶어 한다.","부자는 양반의 빚을 받아 내어 재산을 늘리고 싶어 한다."]),
+P("군수가 증인을 세우고 증서를 작성하자고 한 까닭은 무엇일까?","신분을 사사로이 사고팔았을 뿐이므로 소송의 빌미가 되지 않게 문서로 남겨 놓기 위해서이다.",["양반의 빚을 관청에 정식으로 알리고 환곡을 없애 주기 위해서이다.","부자가 양반에게 글을 가르쳐 달라고 약속했기 때문이다."]),
+P("첫 번째 양반 신분 매매 증서에서 강조하고 있는 내용은 무엇인가?","지나치게 체면과 형식을 중시하는 양반의 모습을 보여 준다.",["백성을 보살피고 나라를 위해 일하는 양반의 책임을 보여 준다.","농사와 장사로 부를 쌓아야 하는 양반의 의무를 보여 준다."]),
+P("부자가 증서를 고쳐 달라고 한 까닭은 무엇일까?","큰돈을 주고 신분을 샀는데 첫 번째 증서에는 양반의 의무만 드러나 있어 부당하다고 생각했기 때문이다.",["증서에 적힌 글씨가 알아보기 어려워 다시 쓰게 하려고 했기 때문이다.","군수가 증서에 부자의 이름을 잘못 적었기 때문이다."]),
+P("부자가 다시는 양반이 되고 싶다는 말을 하지 않은 까닭은 무엇일까?","자신은 양반처럼 부도덕한 존재가 되고 싶지 않았기 때문이다.",["양반 신분을 사려던 돈이 모자랐기 때문이다.","군수가 양반 신분 매매를 허락하지 않았기 때문이다."]),
+{t:"t",l:"핵심",q:"박지원(1737~1805)은 조선 후기의 실학자이자 문인으로, 호(號)는 (　　)이다.",a:"연암"},
+{t:"t",l:"핵심",q:"〈양반전〉은 조선 후기 (　　) 질서가 흔들리고 있는 사회·문화적 상황을 반영함.",a:"신분"},
+W("장사치"),W("좌수"),W("진사")]});
+function F(l,q,a,d){var x=P(q,a,d);x.l=l;return x}
+R.push({n:"영상실 (영화 〈히든 피겨스〉)",key:"열쇠 7: 모든 방을 지났다. 곳간 자물쇠로 가자.",qs:[
+F("영화","(1) 이 영화에서 사회·문화적 상황이 드러난 부분은 어디인가?","캐서린은 흑인이라는 까닭으로 백인과 분리된 건물에서 단순한 계산 업무만 맡았다.",["캐서린은 백인 동료들과 같은 건물에서 똑같은 업무를 맡았다.","캐서린은 소련과의 경쟁 때문에 업무에서 제외되었다."]),
+F("영화","(1) 이 영화에는 어떤 사회·문화적 상황이 반영되었는가?","당시 사회는 흑인들을 심하게 차별해서 실력에 관계없이 백인들과 같은 업무를 할 수 없었고, 유색 인종 화장실을 써야 했다.",["당시 사회는 인종에 관계없이 실력만으로 업무를 나누었다.","당시 사회는 신분 제도가 엄격해 양반과 평민을 구분했다."]),
+{t:"t",l:"영화",q:"캐서린은 반 마일(804.67미터)이나 되는 거리를 걸어 (　　　) 화장실을 사용해야 했다.",a:"유색 인종"},
+F("영화","(2) ‘장면 3’에서 해리슨이 유색 인종 화장실의 푯말을 부순 것은 어떤 의미가 있는지 생각해 보자.","유색 인종에 관한 편견과 사회적 차별을 극복하고자 했다.",["화장실이 낡아 새로 짓기 위해 철거하려고 했다.","백인과 유색 인종의 건물을 더 엄격히 나누려고 했다."]),
+F("영화","(3) 이 영화가 전달하고자 하는 바는 무엇인가?","영화는 모든 사람이 차별받지 않고, 평등한 권리를 누려야 한다고 말하고 있다.",["영화는 능력 있는 사람은 차별을 받아도 참아야 한다고 말하고 있다.","영화는 우주 개발 경쟁에서 이기는 것이 가장 중요하다고 말하고 있다."]),
+{t:"t",l:"영화",q:"〈히든 피겨스〉는 1960년대 (　　　)의 인종 차별 문제를 현실감 있게 묘사한 영화이다.",a:"미국"},
+F("단어","‘유색 인종’의 뜻으로 알맞은 것은?","황색, 동색, 흑색 따위의 유색 피부를 가진 모든 인종. 백색 인종을 제외한 모든 인종을 이르는 말이다.",["야드파운드법에 의한 거리의 단위. 1마일은 약 1.6킬로미터에 해당한다.","대학이나 그 밖의 학교의 교정 또는 구내."]),
+F("단어","‘마일’의 뜻으로 알맞은 것은?","야드파운드법에 의한 거리의 단위. 1마일은 약 1.6킬로미터에 해당한다.",["곡식, 가루, 액체 등의 부피를 재는 단위. 약 180리터에 해당한다.","예전에, 엽전을 세던 단위."]),
+F("단어","‘나사(NASA)’의 뜻으로 알맞은 것은?","1958년에 미국의 우주 개발 계획을 추진하기 위하여 설립된 정부 기관.",["1922년부터 1991년까지 유라시아 대륙의 북부에 있었던 최초의 사회주의 연방 국가.","대학이나 그 밖의 학교의 교정 또는 구내."]),
+F("단어","‘소련’의 뜻으로 알맞은 것은?","1922년부터 1991년까지 유라시아 대륙의 북부에 있었던 최초의 사회주의 연방 국가.",["1958년에 미국의 우주 개발 계획을 추진하기 위하여 설립된 정부 기관.","야드파운드법에 의한 거리의 단위. 1마일은 약 1.6킬로미터에 해당한다."]),
+F("단어","‘캠퍼스’의 뜻으로 알맞은 것은?","대학이나 그 밖의 학교의 교정 또는 구내.",["1922년부터 1991년까지 유라시아 대륙의 북부에 있었던 최초의 사회주의 연방 국가.","황색, 동색, 흑색 따위의 유색 피부를 가진 모든 인종. 백색 인종을 제외한 모든 인종을 이르는 말이다."])]});
+var M=["㉠ 똑똑하고 인품이 훌륭하지만, 경제적으로 무능력한 양반들이 있었다.","㉡ 신분을 사고팔 수 있었다.","㉢ 경제적으로 부유한 평민 계층이 생겨났다.","㉣ 신분에 따른 차별이 존재하였다."];
+var done=[],px=3,py=5,$=function(i){return document.getElementById(i)};
+function norm(s){return s.replace(/\s/g,"")}
+var H=["##1##2##3##4###","#a...........b#","#.............#","#.............#","#.............#","#c...........d#","##5##6##7##V###"];
+var RM=["###########","#a.e...f.b#","#.........#","#...P.....#","#c.......d#","#g.......h#","#####E#####"];
+var DX=[2,5,8,11,2,5,8],sc="h",px=7,py=3,face=1;
+var PL=[["c","낡은 방석이다. 양반은 앉는 자세까지 따졌다고 한다."],["s","책이 가득하다. 글 읽기를 좋아한 정선 양반의 책장 같다."],["j","빈 항아리다. 환곡 곡식은 한 톨도 남지 않았다."],["k","촛불이 흔들린다. 군수는 이런 밤에 증서를 썼을까?"],["p","화분이 놓여 있다. 가난해도 풍류는 잃지 않았다."],["b","빈 곡식 가마니다. 빚이 일천 섬이라니!"],["z","산수화 족자다. 체면치레로 걸어 둔 것일지도 모른다."],["f","부채다. 더워도 맨발로 다니지 않는 게 양반의 법도였다."]];
+function V_(x){return'<svg viewBox="0 0 40 40" stroke="#4a3828" stroke-width="1">'+x+'</svg>'}
+var A={c:V_('<ellipse cx="20" cy="30" rx="14" ry="7" fill="#c94f4f"/><ellipse cx="20" cy="27" rx="13" ry="6" fill="#e36a6a"/><circle cx="20" cy="27" r="2" fill="#f5d27a"/>'),
+s:V_('<rect x="7" y="4" width="26" height="33" rx="2" fill="#9a6b3f"/><rect x="9" y="6" width="22" height="13" fill="#6e4a2a"/><rect x="9" y="21" width="22" height="13" fill="#6e4a2a"/><path d="M10 8h3v11h-3zM14 10h3v9h-3zM18 8h3v11h-3zM22 9h4v10h-4zM27 8h3v11h-3zM10 23h4v11h-4zM15 25h3v9h-3zM19 23h3v11h-3zM23 24h4v10h-4z" fill="#d85f4f" stroke="none"/>'),
+j:V_('<path d="M14 7h12v5c7 3 9 9 7 15-1 6-6 9-13 9s-12-3-13-9c-2-6 0-12 7-15z" fill="#f2f0e6"/><path d="M13 19q7 4 14 0" stroke="#3c6aa8" stroke-width="2" fill="none"/>'),
+k:V_('<rect x="17" y="18" width="6" height="16" rx="1" fill="#f5efe0"/><rect x="12" y="33" width="16" height="4" rx="2" fill="#8a6a3a"/><path d="M20 6q6 6 0 12q-6-6 0-12z" fill="#ffb83d" stroke="none"/><path d="M20 11q2 3 0 6q-2-3 0-6z" fill="#fff3b0" stroke="none"/>'),
+p:V_('<path d="M20 26q-11-4-9-15q9 2 9 15z" fill="#4f9a55"/><path d="M20 26q11-4 9-15q-9 2-9 15z" fill="#6bb36a"/><path d="M20 26q-2-10 0-18q4 8 0 18z" fill="#3f8a48"/><path d="M12 26h16l-2 11h-12z" fill="#b9683f"/>'),
+b:V_('<path d="M11 14q9-6 18 0l3 18q-12 6-24 0z" fill="#d8b46a"/><path d="M12 15q8 4 16 0" stroke="#8a6a3a" stroke-width="2" fill="none"/>'),
+z:V_('<rect x="10" y="5" width="20" height="30" fill="#f6eed8"/><rect x="8" y="3" width="24" height="3" fill="#6a4a2a"/><rect x="8" y="34" width="24" height="3" fill="#6a4a2a"/><path d="M12 30l6-10 4 5 3-4 5 9z" fill="#5a7a6a"/><circle cx="26" cy="13" r="3" fill="#d9534f" stroke="none"/>'),
+f:V_('<path d="M20 33L5 16a21 21 0 0 1 30 0z" fill="#f6e3a0" stroke="#a3281f"/><path d="M20 33L10 15M20 33V12M20 33l10-18" stroke="#a3281f"/><rect x="18" y="32" width="4" height="6" fill="#8a6a3a"/>'),
+d:V_('<rect x="5" y="18" width="30" height="6" rx="2" fill="#8a5a32"/><rect x="8" y="23" width="3" height="13" fill="#6e4a2a"/><rect x="29" y="23" width="3" height="13" fill="#6e4a2a"/><rect x="10" y="11" width="20" height="8" rx="4" fill="#f6eed8" stroke="#a3281f"/><circle cx="26" cy="15" r="2.5" fill="#a3281f" stroke="none"/>')};
+function fc(x,y){return'<circle cx="'+(x-3.5)+'" cy="'+y+'" r="1.2" fill="#2a211b" stroke="none"/><circle cx="'+(x+3.5)+'" cy="'+y+'" r="1.2" fill="#2a211b" stroke="none"/><circle cx="'+(x-6)+'" cy="'+(y+2)+'" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"/><circle cx="'+(x+6)+'" cy="'+(y+2)+'" r="1.6" fill="#ff8f8f" opacity=".7" stroke="none"/><path d="M'+(x-1.8)+' '+(y+2)+'q1.8 1.6 3.6 0" fill="none" stroke="#2a211b" stroke-width="1"/>'}
+[["c",28],["j",25],["b",25],["p",31]].forEach(function(a){A[a[0]]=A[a[0]].replace("</svg>",fc(20,a[1])+"</svg>")});
+A.m=V_('<circle cx="20" cy="20" r="14" fill="#fff4c9"/><circle cx="13" cy="13" r="2" fill="#f7e29a" stroke="none"/>'+fc(20,20));
+A.n=V_('<path d="M20 2v9" fill="none"/><path d="M20 11l7 7-7 7-7-7z" fill="#e2586a"/><path d="M16 25l-2 11M20 25v13M24 25l2 11" fill="none" stroke="#e2586a" stroke-width="2"/>');
+function door(l){return'<svg viewBox="0 0 40 40" stroke="#b5694a" stroke-width="1.2"><rect x="5" y="1" width="30" height="38" rx="2" fill="#b5694a"/><rect x="8" y="4" width="24" height="32" fill="#fff3dc"/><path d="M20 4v32M8 12h24M8 20h24M8 28h24" fill="none"/><rect x="11" y="15" width="18" height="10" rx="5" fill="#fff3dc" stroke="none"/><text x="20" y="23" text-anchor="middle" font-size="'+(l.length>1?7:9)+'" fill="#a3281f" stroke="none" font-family="Jua,sans-serif">'+l+'</text></svg>'}
+function open_(k){return k==1||done[k-2]}
+function toast(t){$("toast").textContent=t}
+function dec(c){return PL[((sc=="h"?3:sc)+"abcdefgh".indexOf(c))%8]}
+function render(snap){
+ var g=sc=="h"?H:RM,w=g[0].length,h="";
+ g.forEach(function(r,y){for(var x=0;x<w;x++){var c=r[x],t="",e="",L="<b>🔒</b>";
+  if(c=="#"){t=y==0?(sc!="h"&&(x==2||x==3||x==7||x==8)?"win":"pw"):"v";if(y==0&&sc!="h")e=x==5?A.m:(x==1||x==9)?A.n:""}
+  else if(sc=="h"&&/[1-7]/.test(c)){t=y?"v":"pw";e=door(c)+(open_(+c)?"":L)}
+  else if(c=="V"){t="v";e=door("곳간")+(done[6]?"":L)}
+  else if(c=="E"){t="v";e=door("복도")}
+  else if(c=="P")e=A.d+(done[sc]?"<b>✅</b>":"");
+  else if(/[a-h]/.test(c))e=A[dec(c)[0]];
+  h+='<i class="'+t+'">'+e+'</i>'}});
+ var T=$("tiles"),S=$("stage"),p=$("pc"),u=$("rug");
+ T.innerHTML=h;T.style.gridTemplateColumns="repeat("+w+",1fr)";S.style.aspectRatio=w+"/7";
+ T.style.fontSize=(S.clientWidth/w*.62)+"px";
+ var q=sc=="h"?[1,3,13,1]:[3,2,5,3];
+ u.style.left=q[0]*100/w+"%";u.style.top=q[1]*100/7+"%";u.style.width=q[2]*100/w+"%";u.style.height=q[3]*100/7+"%";
+ if(snap)p.style.transition="none";
+ p.style.width=100/w+"%";p.style.height=100/7+"%";p.style.left=px*100/w+"%";p.style.top=py*100/7+"%";
+ p.firstChild.style.transform="scaleX("+face+")";
+ if(snap){void p.offsetWidth;p.style.transition=""}
+ $("st").textContent="(푼 방 "+done.filter(Boolean).length+"/7)";
+ if(snap&&window.go_)$("stage").scrollIntoView({block:"center",behavior:"smooth"});window.go_=1;
+}
+function mv(dx,dy){
+ if(!$("modal").classList.contains("hid"))return;
+ if(dx)face=dx;
+ var g=sc=="h"?H:RM,nx=px+dx,ny=py+dy,c=g[ny][nx];toast("");
+ if(c=="#"){render();return}
+ if(c=="P")return room(sc);
+ if(/[a-h]/.test(c)){toast(dec(c)[1]);render();return}
+ if(c=="V")return fin();
+ if(c=="E"){var i=sc;sc="h";px=i<4?DX[i]:DX[i];py=i<4?1:5;render(1);toast("복도로 나왔다.");return}
+ if(sc=="h"&&/[1-7]/.test(c)){var k=+c;
+  if(!open_(k)){toast("잠겨 있다. 방 "+(k-1)+"의 문제를 먼저 풀어라.");return}
+  sc=k-1;px=5;py=5;render(1);toast("방 "+k+". "+R[k-1].n+" — 구석구석 살펴보자. 📜 책상에 문제가 있다.");return}
+ px=nx;py=ny;render();
+ var p=$("pc");p.classList.remove("go");void p.offsetWidth;p.classList.add("go");
+}
+function room(i){
+ var dn=done[i];
+ var r=R[i],h='<button class="x" onclick="shut()">닫기</button><h2>방 '+(i+1)+'. '+r.n+'</h2>';
+ if(i==3)h+='<p class="mark">12~15번: 글을 읽고 알맞은 사회·문화적 상황을 고르시오.<br>'+M.join('<br>')+'</p>';
+ r.qs.forEach(function(q,j){
+  h+='<div class="q"><span class="tag">'+(q.l=="단어"?"단어":q.l+".")+'</span>'+q.q+'<br>';
+  if(q.t=="t")h+='<input id="q'+j+'" autocomplete="off" aria-label="정답">';
+  else{var o=q.t=="m"?["㉠","㉡","㉢","㉣"]:q.o;
+   h+='<select id="q'+j+'"><option value="">선택</option>'+o.map(function(x){return'<option>'+x+'</option>'}).join("")+'</select>'}
+  h+='</div>'});
+ h+=dn?'<p class="msg">이미 푼 방이다. 정답이 채워져 있으니, 곳간 비밀번호의 단서를 찾아보자.</p>':'<button onclick="check('+i+')">정답 확인</button><div class="msg" id="msg" aria-live="polite"></div>';
+ pop(h);
+ if(dn)r.qs.forEach(function(q,j){var e=$("q"+j);e.value=q.a;e.className="ok";e.disabled=true});
+}
+function check(i){
+ var all=true;
+ R[i].qs.forEach(function(q,j){var e=$("q"+j),ok=norm(e.value)==norm(q.a);e.className=ok?"ok":"no";if(!ok)all=false});
+ if(!all){$("msg").textContent="틀린 문제가 있다. 빨간 칸을 다시 살펴보자.";return}
+ done[i]=true;
+ var k=$("keys");k.dataset.k=(k.dataset.k||"")+"<p>"+R[i].key+"</p>";k.innerHTML=k.dataset.k;
+ shut();toast(i<6?"문제를 모두 풀었다! 다음 방의 문이 열렸다.":"모든 방을 지났다. 오른쪽 아래 🏺로 가자.");render();
+}
+function fin(){
+ if(!done[6]){toast("아직 풀지 못한 방이 있다.");return}
+ pop('<button class="x" onclick="shut()">닫기</button><h2>마지막 곳간</h2><p>수첩의 단서를 모아 여섯 자리 숫자 자물쇠를 풀어라.</p><input id="code" inputmode="numeric" maxlength="6" aria-label="여섯 자리 숫자" style="font-size:1.4rem;letter-spacing:.3em;width:9em;text-align:center"><br><button onclick="lock()">자물쇠 열기</button><div class="msg" id="fm"></div><div id="end"></div>');
+}
+function lock(){
+ if($("code").value.trim()=="324312"){
+  $("fm").textContent="자물쇠가 열렸다!";
+  $("end").innerHTML='<div class="note"><b>탈출 성공. 결론</b><p>조선 후기에는 엄격하던 신분 제도가 무너지며 신분을 사고팔 수 있었고, 환곡 때문에 양반이 신분을 판 일이 그 증거이다. 두 장의 증서는 양반의 허례허식과 횡포를 보여 주며, 작가 박지원은 이런 양반을 <span class="seal">비판</span>하였다.</p></div>';
+ }else $("fm").textContent="열리지 않는다. 열쇠 수첩을 다시 읽어 보자.";
+}
+function pop(h){$("mb").innerHTML=h;$("modal").classList.remove("hid")}
+function shut(){$("modal").classList.add("hid")}
+document.querySelectorAll(".pad button[data-d]").forEach(function(b){b.onclick=function(){var d=b.dataset.d.split(",");mv(+d[0],+d[1])}});
+document.addEventListener("keydown",function(e){
+ if(e.key=="Escape")return shut();
+ var t=e.target.tagName;if(t=="INPUT"||t=="SELECT")return;
+ var d={ArrowUp:[0,-1],w:[0,-1],ArrowDown:[0,1],s:[0,1],ArrowLeft:[-1,0],a:[-1,0],ArrowRight:[1,0],d:[1,0]}[e.key];
+ if(d){e.preventDefault();mv(d[0],d[1])}
+});
+window.onresize=function(){render()};render(1);
+</script></main>
+</body></html>
